@@ -1,3 +1,22 @@
+/*
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=IBM+Plex+Sans:ital@0;1&family=Work+Sans:ital@0;1&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+
+:root {
+    --heading-font: 'Dangrek', cursive;
+    --paragraph-font: 'IBM Plex Sans', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+p {
+    font-family: var(--paragraph-font);
+}
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -6,13 +25,24 @@
 #background {
     height: 725px;
 }
+#logo_link {
+    padding-top: 5px;
+}
 
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 
 body {
     background-color: #DAEAF1;
+    font-family: var(--paragraph-font);
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin: 0;
 }
 header {
     background-color: #256486;
@@ -22,6 +52,7 @@ nav a {
     color: #DDF9FF;
     text-decoration: none;
     font-weight: bold;
+    padding: 35px;
 }
 nav a:hover {
     background-color: #053C5E;
@@ -29,6 +60,8 @@ nav a:hover {
 }
 .home-tittle {
     color: #053C5E;
+    font-size: 2em;
+    margin-top: 10px;
 }
 h4 {
     color: black;
@@ -38,6 +71,16 @@ h4 {
     color: black;
     text-decoration: underline;
     font-weight: bold;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.card-img {
+    border: 10px solid #053C5E;
+}
+.rivers-card, .camping-card, .rapids-card{
+    margin: 200px 0;
 }
 .book:hover, .join:hover {
     background-color: #81D3FF;
@@ -46,17 +89,26 @@ h4 {
 
 .msg {
     background-color: #DAEAF1;
+    line-height: 1.5em;
+    padding: 35px;
 }
 .msg h2 {
     color: black;
 }
 .msg p {
     color: black;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 
 footer {
     background-color: #053C5E;
     color: white;
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+footer .social img {
+    padding-top: 15px;
 }
 footer a {
     color: #DAEAF1;
@@ -75,4 +127,7 @@ footer a:hover {
 }
 main section{
     text-align: center; 
+}
+main section img{
+    box-sizing: border-box;
 }
