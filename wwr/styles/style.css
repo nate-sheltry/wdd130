@@ -25,7 +25,7 @@ p {
 
 .home-grid {
     display: grid;
-    grid-template-columns: 1/10;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #background {
