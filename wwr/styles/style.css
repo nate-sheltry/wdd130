@@ -177,6 +177,7 @@ footer a:hover {
     grid-row: 1/3;
     z-index: -1;
 }
+
 #hero-msg h4 {
     color: white;
 }
@@ -198,6 +199,367 @@ main section{
 }
 main section img{
     box-sizing: border-box;
+}
+
+/*Rivers Page*/
+
+.rivers-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+    grid-template-rows: .1fr 1.9fr .1fr 1.9fr .1fr 1.9fr 
+}
+.rivers-tittle {
+    color: #053C5E;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/*Rivers Classes*/
+.rivers-box {
+    grid-column:1/4;
+    grid-template-rows: .1fr 1.9fr;
+    padding: 10px;
+    margin-top: 5px; margin-bottom: 5px;
+}
+.rivers-box:hover {
+    opacity: .9;
+    transform: scale(1.01);
+    transition: box-shadow .25s, transform .5s;
+    box-shadow: 5px 5px 10px black;
+}
+.rivers-box:hover .rivers-img-right {
+    margin-left: -100px;
+    margin-top: -20px;
+    margin-right: 20px;
+    box-shadow: 6px 6px 18px black;
+    transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+}
+.rivers-box:hover .river-class-header-right {
+    margin-right: 100px;
+    margin-left:-100px;
+    transition: margin-right .3s;
+}
+.rivers-box:hover .river-tittle-header-right {
+    transform: scale(1.01);
+    transition: transform .25s;
+}
+.rivers-box:hover .river-info-right {
+    margin-right: 100px;
+    transition: margin-right .05s;
+}
+
+.rivers-box:hover .rivers-img-left {
+    margin-right: -100px;
+    margin-top: -20px;
+    margin-left: 20px;
+    box-shadow: -6px 6px 18px black;
+    transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+}
+.rivers-box:hover .river-class-header-left {
+    transition: margin-right .3s;
+}
+.rivers-box:hover .river-tittle-header-left {
+    padding-left: 100px;
+    transform: scale(1.01);
+    
+    transition: transform .25s, padding-left .3s;
+}
+.rivers-box:hover .river-info-left {
+    position: relative;
+    left: 100px;
+    margin-right: 100px;
+}
+
+
+#rivers {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: -100px;
+}
+#rivers-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+#rivers-banner {
+    height: 100%;
+    width: 100%;
+}
+#rivers-msg h4 {
+    color: white;
+}
+#rivers-msg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 100px;
+}
+#locations-msg {
+    font-size: 24px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-top: 0px;
+    text-shadow: .5px 0px 0.5px black;
+}
+
+/*Salmon River*/
+#river-top-gradient{
+    height: 10px;
+    background: linear-gradient(to bottom, #DAEAF1 0%, #256486 70%);
+    margin-bottom: -5px;
+}
+#salmon-river-box {
+    grid-column:1/4;
+    grid-row: 1/3;
+    border: 5px solid #256486;
+    display: grid;
+    grid-template-columns: 2.25fr .75fr 2fr;
+    background-color: #256486;
+}
+#salmon-river-tittle, #salmon-river-class {
+    grid-row: 1;
+    margin-top: 30px;
+    line-height:0px;
+    font-size-adjust: auto;
+}
+#salmon-river-tittle {
+    grid-column: 1;
+}
+#salmon-river-class {
+    grid-column: 1/3;
+    text-align: right;
+    font-size: 24px;
+}
+#salmon-river-msg {
+    grid-column: 1/3;
+    grid-row: 2;
+    font-size: 22px;
+    color: white;
+    margin-top: -50px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: -15px;
+    text-align: left;
+}
+#salmon-river-img-box {
+    grid-column: 3;
+    grid-row: 1/3;
+    float: right;
+}
+#salmon-river-img {
+    height: 100%;
+    width: 100%;
+    min-width: 500px;
+    border: 5px solid #053C5E;
+    margin-top: -5px;
+    margin-left: -5px;
+    box-shadow: 2px 2px 10px black;
+}
+
+/*Green River*/
+#green-river-box {
+    grid-row: 3/5;
+    border: 5px solid #81D3FF;
+    display: grid;
+    grid-template-columns: 2fr 2.25fr .75fr;
+    background-color: #81D3FF;
+}
+#green-river-tittle, #green-river-class {
+    grid-row: 1;
+    line-height:0px;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size-adjust: auto;
+}
+#green-river-tittle {
+    grid-column: 2;
+    font-size: 26px;
+}
+#green-river-class {
+    grid-column: 2/4;
+    text-align: right;
+    font-size: 24px;
+}
+#green-river-msg {
+    grid-column: 2/4;
+    grid-row: 2;
+    font-size: 22px;
+    margin-top: -50px;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: left;
+    text-shadow: .5px 0px 0.5px black;
+}
+#green-river-img-box {
+    grid-column: 1;
+    grid-row: 1/3;
+    float: left;
+}
+#green-river-img {
+    height: 100%;
+    width: 100%;
+    min-width: 500px;
+    border: 5px solid #053C5E;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+/*Salmon River*/
+#grand-canyon-river-box {
+    grid-row: 5/7;
+    border: 5px solid #053C5E;
+    display: grid;
+    grid-template-columns: 2.25fr .75fr 2fr;
+    background-color: #053C5E;
+}
+#grand-canyon-river-tittle, #grand-canyon-river-class {
+    grid-row: 1;
+    margin-top: 30px;
+    line-height:0px;
+    padding: 5px;
+    font-size-adjust: auto;
+    color: white;
+}
+#grand-canyon-river-tittle {
+    grid-column: 1;
+}
+#grand-canyon-river-class {
+    grid-column: 1/3;
+    text-align: right;
+    font-size: 24px;
+}
+#grand-canyon-river-msg {
+    grid-column: 1/3;
+    grid-row: 2;
+    font-size: 22px;
+    margin-top: -50px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: -15px;
+    text-align: left;
+    color: white;
+}
+#grand-canyon-river-img-box {
+    grid-column: 3;
+    grid-row: 1/3;
+    float:right;
+}
+#grand-canyon-river-img {
+    height: 100%;
+    width: 100%;
+    min-width: 500px;
+    border: 5px solid #256486;
+    margin-top: -5px;
+    margin-left:-5px;
+}
+#river-bottom-gradient{
+    height: 10px;
+    background: linear-gradient(to top, #DAEAF1 0%, #053C5E 70%);
+    margin-top: -5px;
+}
+
+#rivers-msg h1, #rivers-msg h4{
+    text-align: center; 
+}
+
+@media screen and (max-width: 1100px){
+    /*Rivers Page*/
+    .rivers-box {
+        grid-column:1/4;
+        grid-template-columns: .1fr 1.9fr;
+        grid-template-rows: 1.9fr .1fr 1.9fr;
+    }
+    #salmon-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #salmon-river-tittle, #salmon-river-class {
+        grid-row: 2;
+    }
+    #salmon-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #salmon-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #salmon-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    #green-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #green-river-tittle, #green-river-class {
+        grid-row: 2;
+    }
+    #green-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #green-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #green-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    #grand-canyon-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #grand-canyon-river-tittle, #grand-canyon-river-class {
+        grid-row: 2;
+    }
+    #grand-canyon-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #grand-canyon-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #grand-canyon-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    .rivers-box:hover .rivers-img-left {
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        box-shadow: -6px 6px 18px black;
+        transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+    }
+    .rivers-box:hover .rivers-img-right {
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        box-shadow: -6px 6px 18px black;
+        transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+    }
+    .rivers-box:hover .river-tittle-header-left {
+        padding-left: 0px;
+        transform: scale(1.01);
+        
+        transition: transform .25s, padding-left .3s;
+    }
+    .rivers-box:hover .river-class-header-right {
+        margin-right: 0px;
+        margin-left: 0px;  
+    }
+    .rivers-box:hover .river-info-right {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rivers-box:hover .river-info-left {
+        margin-left: 0px;
+        margin-right: 0px;
+        position: relative;
+        left: 0px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -239,5 +601,120 @@ main section img{
     }
     footer {
         margin-top: 25px;
+    }
+
+    /*Rivers Page*/
+    #rivers, .rivers-grid {
+        display: block;
+        height: auto;
+    }
+    #rivers {
+        margin-top: 0;
+    }
+    #rivers-msg {
+        margin-top: 0;
+    }
+    #rivers-msg h4 {
+        display: none;
+    }
+    .rivers-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    .rivers-box {
+        grid-column:1/4;
+        grid-template-columns: .1fr 1.9fr;
+        grid-template-rows: 1.9fr .1fr 1.9fr;
+    }
+    #salmon-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #salmon-river-tittle, #salmon-river-class {
+        grid-row: 2;
+    }
+    #salmon-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #salmon-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #salmon-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    #green-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #green-river-tittle, #green-river-class {
+        grid-row: 2;
+    }
+    #green-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #green-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #green-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    #grand-canyon-river-img-box {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    #grand-canyon-river-tittle, #grand-canyon-river-class {
+        grid-row: 2;
+    }
+    #grand-canyon-river-tittle {
+        grid-column: 1/3;
+        text-align: left;
+    }
+    #grand-canyon-river-class {
+        grid-column: 2/4;
+        text-align: right;
+    }
+    #grand-canyon-river-msg {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    .rivers-box:hover .rivers-img-left {
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        box-shadow: -6px 6px 18px black;
+        transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+    }
+    .rivers-box:hover .rivers-img-right {
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        box-shadow: -6px 6px 18px black;
+        transition: box-shadow .25s, margin-left .5s, margin-right .5s;
+    }
+    .rivers-box:hover .river-tittle-header-left {
+        padding-left: 0px;
+        transform: scale(1.01);
+        
+        transition: transform .25s, padding-left .3s;
+    }
+    .rivers-box:hover .river-class-header-right {
+        margin-right: 0px;
+        margin-left: 0px;  
+    }
+    .rivers-box:hover .river-info-right {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rivers-box:hover .river-info-left {
+        margin-left: 0px;
+        margin-right: 0px;
+        position: relative;
+        left: 0px;
     }
 }
