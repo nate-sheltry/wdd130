@@ -340,7 +340,6 @@ main section img{
     grid-row: 1;
     margin-top: 30px;
     line-height:0px;
-    font-size-adjust: auto;
 }
 #salmon-river-tittle {
     grid-column: 1;
@@ -389,7 +388,6 @@ main section img{
     line-height:0px;
     margin-top: 30px;
     margin-left: 15px;
-    font-size-adjust: auto;
 }
 #green-river-tittle {
     grid-column: 2;
@@ -437,7 +435,6 @@ main section img{
     margin-top: 30px;
     line-height:0px;
     padding: 5px;
-    font-size-adjust: auto;
     color: white;
 }
 #grand-canyon-river-tittle {
