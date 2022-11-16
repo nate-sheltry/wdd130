@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitewater Rafting Vacations | TableTop Chaos | Rivers</title>
+    <title>Tabletop Games and Fun | TableTop Chaos | Games</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script rel="script" defer src="scripts/script.js"></script>
 </head>
-<body>
+<body id="home-body">
 <div id="content">
     <header>
         <a id = "logo_link" href="index.html">
@@ -17,13 +18,13 @@
             <a href="index.html">Home</a>
             <a href="dnd_page.html">Dungeons & Dragons 5<sup>th</sup> Edition</a>
             <a href="fallout_page.html">Fallout Pen and Paper</a>
-            <a href="site-plan-rafting.html">Site Plan</a>
+            <a href="site-plan.html">Site Plan</a>
             <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
     <div id="home-box">
-        <div id="home-banner-box">
-            <img id="home-banner-img" src="images/home_banner.jpg" alt="Twenty-sided die">
+        <div id="banner-box">
+            <img id="banner-img" src="images/home_banner.jpg" alt="Twenty-sided die">
         </div>
         <section id="home-banner-msg">
             <h1 class="home-tittle">Start Your Adventure</h1>
@@ -32,3 +33,55 @@
             </div>
         </section>
     </div>
+    <section class="home-welcome-message">
+        <h2>Welcome</h2>
+        <p> &emsp;&emsp;To TableTop Chaos, the end all, be all for finding information on your favorite tabletop role-playing games. 
+            Whether you’re new to tabletop games or a seasoned player we’ve got everything you need. 
+            Pick your preferred game and dive into all the available content for it: rules, mechanics, items, enemies, and spells. 
+            All of it is at the edge of your fingertips.
+        </p>
+        <p id="action-msg">Browse the Game Systems Below</p>
+    </section>
+    <div id="home-top-gradient"></div>
+    <main class="home-grid">
+        <section class="game-card" id="dnd-card">
+            <div class="game-card-img"><a href="dnd_page.html" >
+                <img src="images/dnd_card.jpeg" alt="Dungeons and Dragons Thumbnail">
+            </a></div>
+            <h2 class="game-card-header">Dungeons and Dragons 5<sup>th</sup> Edition</h2>
+        </section>
+        <section class="game-card" id="fallout-card">
+            <div class="game-card-img"><a href="fallout_page.html" >
+                <img src="images/fallout_card.jpeg" alt="Fallout Thumbnail">
+            </a></div>
+            <h2 class="game-card-header">Fallout Pen <sup></sup>and Paper</h2>
+        </section>
+        <section class="take-a-chance-msg">
+            <h2>Try Something New</h2>
+            <p> &emsp;&emsp;Tired of the game you’re playing? Looking for something new? 
+                Whether you are looking for an advanced or simple system, discover a new game and start playing with your friends. 
+                From character creation to status effects, we have you covered.
+            </p>
+            <button id="take-a-chance-btn">Take a chance</button>
+        </section>
+    </main>
+    <div id="home-bottom-gradient"></div>
+    <footer>
+        <p>TableTop Chaos &copy; 2022 - Nathaniel Dunham</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <p><a href="contactus.html">Contact Us</a></p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
