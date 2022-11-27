@@ -5,6 +5,8 @@
     
     --primary-color: #C2A36990   ;
     --secondary-color: #D0B25980 ;
+    --primary-color-: #C2A369   ;
+    --secondary-color-: #D0B259 ;
     --accent1-color: #97261C;
     --accent2-color: #31406D;
     --accent3-color: #C74628;
@@ -66,6 +68,12 @@ nav a {
     font-weight: bold;
     padding: 35px;
     transition: font-size .3s;
+}
+nav a:hover {
+    color: var(--secondary-color-);
+    text-shadow: .5px .5px 2px black, -.5px -.5px 2px black;
+    transform: scale(1.02, 1.02);
+    transition: color .2s, text-shadow .2s, transform .3s;
 }
 
 div section {
