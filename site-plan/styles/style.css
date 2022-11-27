@@ -244,9 +244,9 @@ footer a:hover {
     height: fit-content;
     align-items: center;
 }
-.tool-bar h2 {
+/*.tool-bar h2 {
     
-}
+}*/
 .tool-bar nav{
     display: grid;
     grid-template-columns: .4fr 1.6fr .4fr .6fr;
@@ -339,9 +339,6 @@ footer a:hover {
         display: block;
         padding: 15px;
         font-size: 18px;
-    }
-    .logo {
-
     }
     #home-box {
         margin-top: 0px;
