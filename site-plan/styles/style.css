@@ -188,7 +188,6 @@ div section {
 }
 #take-a-chance-btn:hover {
     transform:scale(1.1, 1.1);
-    transition: transform .1s;
 
 }
 .take-a-chance-msg {
@@ -211,6 +210,7 @@ div section {
 #take-a-chance-btn {
     display:flex;
     justify-content: space-around;
+    transition: transform .1s;
 }
 
 #home-top-gradient {
