@@ -28,6 +28,11 @@ p {
     margin: 0 auto;
     background-color: var(--primary-color);
 }
+.logo {
+    margin: 0em 0em 0em 1em;
+    width: 200px;
+    height: auto;
+}
 body {
     background-repeat:no-repeat;
     background-size:cover;
@@ -57,9 +62,10 @@ nav a {
     text-align: center;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     padding: 35px;
+    transition: font-size .3s;
 }
 
 div section {
@@ -70,11 +76,13 @@ div section {
     margin-top: -450px;
     margin-bottom: 250px;
     position: relative;
+    transition: margin-top .1s;
 }
 .home-tittle{
     color: var(--accent3-color);
-    font-size: 48px;
+    font-size: 72px;
     text-align: center;
+    text-shadow: 1.5px 1px .5px var(--accent1-color), 3px 2px 1px black;
 }
 .button-box {
     font-size: 48px;
@@ -82,9 +90,16 @@ div section {
 
 }
 .view {
-    color: var(--accent1-color);
+    color: white;
     font-weight: bold;
-
+    text-shadow: .5px .5px 2px black;
+    text-decoration: none;
+    transition: opacity .3s, color .3s;
+}
+.view:hover {
+    color: var(--accent1-color);
+    text-shadow: .5px .5px 2px black, .5px .5px 2px white, -.5px -.5px 2px white;
+    opacity: .8;
 }
 .home-grid{
     display: grid;
@@ -95,7 +110,8 @@ div section {
 
 #banner-img {
     height: auto;
-    width: 1600px;
+    width: 100%;
+    max-width: 1600px;
     -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, 
                         color-stop(0.50,  rgba(0,0,0,1)),
                         color-stop(1.00,  rgba(0,0,0,0)));
@@ -121,17 +137,27 @@ div section {
     display: grid;
     grid-template-columns: 2fr;
     grid-template-rows: 3.6fr .4fr;
+    transition: transform .5s;
+}
+.game-card:hover {
+    transform:scale(110%, 110%);
+}
+.game-card:hover .game-card-img {
+    filter:brightness(110%);
+    opacity: .9;
 }
     
 .game-card-header {
     text-align: center;
+
 }
 
 .game-card-img {
     display: flex;
     width: 100%;
-    height: fit-content;
+    max-height: 460px;
     justify-content: center;
+    transition: opacity .2s, filter .2s;
 }
 
 .game-card-img img {
@@ -140,6 +166,7 @@ div section {
     box-shadow: 2px 2px 10px black;
     width: 100%;
     height: auto;
+    background-color: white;
 }
 #dnd-card {
     grid-column: 2/4;
@@ -150,6 +177,12 @@ div section {
 #fallout-card img {
     grid-column: 4/6;
     border: 10px solid var(--accent2-color);
+}
+#take-a-chance-btn:hover {
+    transform:scale(110%, 110%);
+    translate: -50% 0;
+    transition: translate .1s, transform .1s;
+
 }
 .take-a-chance-msg {
     grid-column: 1/7;
@@ -269,4 +302,59 @@ footer a:hover {
     font-size: 48px;
     text-align: center;
     font-family: var(--paragraph-font);
+}
+
+@media screen and (max-width: 1400px) {
+    .game-card {
+        margin: 0px 5px 0px 5px;
+    }
+    #home-banner-msg {
+        margin-top: -400px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #home-box, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav a {
+        font-size: 20px;
+    }
+    #home-banner-msg {
+        margin-top: -300px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    #home-box, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .logo {
+
+    }
+    #home-box {
+        margin-top: 0px;
+    }
+    #banner-img {
+        transform: scale(100%, 120%);
+        margin-top: 23px;
+        height: 100%;
+        min-height: 230px;
+        max-height: 320px;
+    }
+    #home-banner-msg {
+        margin-top: -100px;
+    }
+    
 }
