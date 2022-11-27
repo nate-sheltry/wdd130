@@ -140,7 +140,7 @@ div section {
     transition: transform .5s;
 }
 .game-card:hover {
-    transform:scale(110%, 110%);
+    transform:scale(1.1, 1.1);
 }
 .game-card:hover .game-card-img {
     filter:brightness(110%);
@@ -179,27 +179,30 @@ div section {
     border: 10px solid var(--accent2-color);
 }
 #take-a-chance-btn:hover {
-    transform:scale(110%, 110%);
-    translate: -50% 0;
-    transition: translate .1s, transform .1s;
+    transform:scale(1.1, 1.1);
+    transition: transform .1s;
 
 }
 .take-a-chance-msg {
+    display: block;
     grid-column: 1/7;
     font-size: 22px;
 }
-.take-a-chance-msg button {
+#take-a-chance-btn button {
     margin-top: 40px;
     display: block;
-    position:relative;
     width: 18%;
-    height: 20%;
-    left: 50%;
+    min-width: 160px;
+    height: 36px;
     font-size: 18px;
     text-shadow: .5px 0px .5px black;
     font-family:var(--paragraph-font);
-    transform: translate(-50%, 0%);
     box-shadow: 1px 1px 7px black;
+    align-content: center;
+}
+#take-a-chance-btn {
+    display:flex;
+    justify-content: space-around;
 }
 
 #home-top-gradient {
@@ -344,7 +347,7 @@ footer a:hover {
         margin-top: 0px;
     }
     #banner-img {
-        transform: scale(100%, 120%);
+        transform: scale(1, 1.2);
         margin-top: 23px;
         height: 100%;
         min-height: 230px;
