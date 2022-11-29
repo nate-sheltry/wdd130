@@ -3,13 +3,14 @@
 
 :root {
     
-    --primary-color: #C2A36990   ;
-    --secondary-color: #D0B25980 ;
+    --primary-color: #C2A36995   ;
+    --secondary-color: #D0B25995 ;
     --primary-color-: #C2A369   ;
     --secondary-color-: #D0B259 ;
     --accent1-color: #97261C;
     --accent2-color: #31406D;
     --accent3-color: #C74628;
+    --accent4-color: #152658;
 
     --heading-font: "IM Fell French Canon SC";
     --paragraph-font: Helvetica, Lato, sans-serif;
@@ -30,6 +31,9 @@ p {
     margin: 0 auto;
     background-color: var(--primary-color);
 }
+#logo-link {
+    width: fit-content;
+}
 .logo {
     margin: 0em 0em 0em 1em;
     width: 200px;
@@ -44,6 +48,7 @@ body {
 }
 #fallout-body {
     background-image: url("../images/fallout_background.jpg");
+
 }
 #dnd-body {
     background-image: url("../images/dnd_background.jpg");
@@ -53,7 +58,7 @@ header {
     margin-top:-8px;
     background-color: var(--accent2-color);
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 250px auto;
 }
 nav {
     display: flex;
@@ -146,6 +151,7 @@ div section {
     grid-template-columns: 2fr;
     grid-template-rows: 3.6fr .4fr;
     transition: transform .5s;
+    margin: 0px 20px -30px 0px;
 }
 .game-card:hover {
     transform:scale(1.1, 1.1);
@@ -157,7 +163,6 @@ div section {
     
 .game-card-header {
     text-align: center;
-
 }
 
 .game-card-img {
@@ -166,6 +171,8 @@ div section {
     max-height: 460px;
     justify-content: center;
     transition: opacity .2s, filter .2s;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 
 .game-card-img img {
@@ -184,7 +191,7 @@ div section {
 }
 #fallout-card img {
     grid-column: 4/6;
-    border: 10px solid var(--accent2-color);
+    border: 10px solid var(--accent4-color);
 }
 #take-a-chance-btn:hover {
     transform:scale(1.1, 1.1);
@@ -215,12 +222,12 @@ div section {
 
 #home-top-gradient {
     height: 20px;
-    background: linear-gradient(to bottom, var(--primary-color) 20%, var(--secondary-color) 80%);  
+    background: linear-gradient(to bottom, transparent 0%, var(--secondary-color) 80%);  
 }
 
 #home-bottom-gradient {
     height: 20px;
-    background: linear-gradient(to top, var(--primary-color) 20%, var(--secondary-color) 80%); 
+    background: linear-gradient(to top, transparent 0%, var(--secondary-color) 80%); 
 }
 
 
@@ -254,6 +261,13 @@ footer a:hover {
     grid-template-columns: .5fr 10fr;
     height: fit-content;
     align-items: center;
+    margin: auto 5px auto 5px;
+}
+.tool-bar h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: .5px .5px 1px black;
+
 }
 /*.tool-bar h2 {
     
@@ -261,66 +275,151 @@ footer a:hover {
 .tool-bar nav{
     display: grid;
     grid-template-columns: .4fr 1.6fr .4fr .6fr;
-    background-color: rgba(50, 50, 50, 80);
-    border: 3px solid rgba(50, 50, 50, 80);
+    background-color: rgba(30,30,30,.75);
+    border: 3px solid rgba(30,30,30,.75);
     border-radius: 25px;
     align-items: center;
+    max-height: 95px;
 }
 .tool-bar nav a{
-    border-right: 2px solid black;
-    
+    border-right: 3px solid rgba(10,10,10,.75);
+    border-left: 3px solid rgba(10,10,10,.75);
+    transition: color .2s, transform .2s, text-shadow .2s;
 }
 #end-of-nav{
     border-right: 0px solid black;
 }
+#start-of-nav{
+    border-left: 0px solid black;
+}
+.tool-bar nav a:hover {
+    transform: scale(1.01, 1);
+    border: 0px solid black;
+}
 .card-header {
-    margin-top: -260px;
-    margin-bottom: 260px;
-    font-weight: bolder;
+    margin: 0px 0px 0px 0px;
     user-select: none;
     border-bottom: 0px;
     font-size: 48px;
     text-align: center;
     color:white;
     text-shadow: 1px 1px 2px black, -1px -1px 2px black, 0px 0px 7px black;
+    position: relative;
+    top: -55%;
 }
 .game-card-img a{
     text-decoration:none;
 }
+#game-card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    background-color: rgba(30,30,30,.75);
+}
 
+#game-card-grid .game-card:first-child:nth-last-child(4), 
+#game-card-grid .game-card:first-child:nth-last-child(4)  ~ .game-card,
+#game-card-grid .game-card:first-child:nth-last-child(7), 
+#game-card-grid .game-card:first-child:nth-last-child(7)  ~ .game-card,
+#game-card-grid .game-card:first-child:nth-last-child(8),
+#game-card-grid .game-card:first-child:nth-last-child(8)  ~ .game-card{
+    flex-basis:22.5%;
+    margin-bottom: -60px;
+}
+
+#game-card-grid .game-card:first-child:nth-last-child(5), 
+#game-card-grid .game-card:first-child:nth-last-child(5)  ~ .game-card,
+#game-card-grid .game-card:first-child:nth-last-child(9), 
+#game-card-grid .game-card:first-child:nth-last-child(9)  ~ .game-card,
+#game-card-grid .game-card:first-child:nth-last-child(10),
+#game-card-grid .game-card:first-child:nth-last-child(10)  ~ .game-card{
+    flex-basis:17.5%;
+    margin-bottom: -70px;
+}
+#fallout-banner-msg, #dnd-banner-msg {
+    position: sticky;
+    top: 45%;
+    left: 50%;
+    min-width: 580px;
+    transform: translate(0%, -200%)
+}
+#game-top-gradient {
+    height: 20px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(30,30,30,.75) 100%);  
+}
+
+#game-bottom-gradient {
+    height: 20px;
+    background: linear-gradient(to top, transparent 0%, rgba(30,30,30,.75) 100%); 
+}
 
 /*Fallout Page*/
-#fallout-banner-msg {
-    margin-top: -450px;
-    margin-bottom: 250px;
-    position: relative;
-}
 .fallout-tittle{
-    color: var(--accent3-color);
+    color: var(--accent1-color);
     font-size: 48px;
     text-align: center;
     font-family: var(--paragraph-font);
+    text-shadow: 1.5px 1px .5px var(--accent4-color), 3px 2px 1px black;
+}
+#fallout-1 img, #fallout-2 img, #fallout-tactics img{
+    border-color: var(--accent4-color);
+}
+#fallout-summary h2, #fallout-basis h2{
+    font-family: var(--paragraph-font);
+    font-weight: 800;
+    font-size: 32px;
+}
+#fallout-summary p, #fallout-basis p{
+    font-family: var(--fallout-font);
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    
 }
 
 /*DnD Page*/
-#fallout-banner-msg {
-    margin-top: -450px;
-    margin-bottom: 250px;
-    position: relative;
-}
 .dnd-tittle{
-    color: var(--accent3-color);
+    color: var(--accent2-color);
     font-size: 48px;
     text-align: center;
     font-family: var(--paragraph-font);
+    text-shadow: 1.5px 1px .5px var(--accent4-color), 3px 2px 1px black;
+}
+#dnd-summary h2{
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 36px;
+    text-shadow: .5px 0px .25px black;
+}
+#dnd-summary p{
+    font-family: var(--paragraph-font);
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    text-shadow: .5px 0px .25px black;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .game-card {
         margin: 0px 5px 0px 5px;
     }
     #home-banner-msg {
-        margin-top: -400px;
+        margin-top: -350px;
+    }
+    /*Flex Game Card Grids *universal* */
+    #game-card-grid .game-card {
+        flex-basis: 40%;
+        margin: 0px 22px -30px 0px;
+    }
+    #game-card-grid .game-card:first-child:nth-last-child(5), 
+    #game-card-grid .game-card:first-child:nth-last-child(5)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(9), 
+    #game-card-grid .game-card:first-child:nth-last-child(9)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(10),
+    #game-card-grid .game-card:first-child:nth-last-child(10)  ~ .game-card{
+        flex-basis:24%;
+        margin: 0px 22px -50px 0px;
     }
 }
 
@@ -334,6 +433,22 @@ footer a:hover {
     }
     #home-banner-msg {
         margin-top: -300px;
+    }
+    #fallout-banner-msg, #dnd-banner-msg {
+        position: sticky;
+        top: 45%;
+        left: 50%;
+        min-width: 580px;
+        transform: translate(0%, -150%)
+    }
+    #game-card-grid .game-card:first-child:nth-last-child(5), 
+    #game-card-grid .game-card:first-child:nth-last-child(5)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(9), 
+    #game-card-grid .game-card:first-child:nth-last-child(9)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(10),
+    #game-card-grid .game-card:first-child:nth-last-child(10)  ~ .game-card{
+        flex-basis:28%;
+        margin: 0px 22px -50px 0px;
     }
     
 }
@@ -351,6 +466,9 @@ footer a:hover {
         padding: 15px;
         font-size: 18px;
     }
+    #content {
+        margin: 0px -8px 0px -8px;
+    }
     #home-box {
         margin-top: 0px;
     }
@@ -364,5 +482,29 @@ footer a:hover {
     #home-banner-msg {
         margin-top: -100px;
     }
+    /*fallout*/
+    /*Dungeons and Dragons Page*/
+    #dnd-banner-msg, #fallout-banner-msg {
+        position: sticky;
+        top: 45%;
+        left: 50%;
+        min-width: 580px;
+        transform: translate(0%, -100%)
+    }
+    /*Flex Game Card Grids *universal* */
+    #game-card-grid .game-card {
+        flex-basis: 40%;
+        margin: 0px 22px -30px 0px;
+    }
+    #game-card-grid .game-card:first-child:nth-last-child(5), 
+    #game-card-grid .game-card:first-child:nth-last-child(5)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(9), 
+    #game-card-grid .game-card:first-child:nth-last-child(9)  ~ .game-card,
+    #game-card-grid .game-card:first-child:nth-last-child(10),
+    #game-card-grid .game-card:first-child:nth-last-child(10)  ~ .game-card{
+        flex-basis:36%;
+        margin: 0px 22px -50px 0px;
+    }
+
     
 }
